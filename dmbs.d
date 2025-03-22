@@ -41,7 +41,6 @@ void goRebuild(string[] args, string sourcePath = __FILE__,) {
 
 int main(string[] args) {
     goRebuild(args);
-    // if (!cmd(["dmd", "-O", "toa.d", "./raylib-5.5_linux_amd64/include/raylib.c", format("-L=%s", "-l:libraylib.so.550"), "-L=-L=./raylib-5.5_linux_amd64/lib/"])) return 1;
     if (!cmd(["dmd", "-O", "main.d"])) return 1;
     return 0;
 }
